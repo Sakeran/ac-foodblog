@@ -1,0 +1,71 @@
+.recipe-summary {
+  padding: 2rem 0.5rem;
+
+  & p {
+    padding: 0;
+  }
+
+  & h3 {
+    font-size: 3rem;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    padding-bottom: 2rem;
+  }
+
+  & img {
+    // margin: 1rem auto;
+    border-radius: 16px;
+  }
+
+  & .recipe-text {
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  & .recipe-text-lead,
+  & .recipe-text-details span {
+    font-weight: 700;
+  }
+
+  & .recipe-link a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
+
+.summary-theme(@bg-color, @img-url: "") {
+  background-color: @bg-color;
+
+  & h3 {
+    color: contrast(@bg-color);
+  }
+
+  background-image: url(@img-url);
+  background-size: contain;
+  background-blend-mode: overlay;
+
+  &.lazybg {
+    background-image: none;
+  }
+}
+
+// Recipe Themes
+
+.scupcakes {
+  .summary-theme(#a74692, "./img/iced-strawberry-cupcakes.jpg");
+}
+
+.dccookies {
+  .summary-theme(#291202, "./img/double-chocolate-cookies.jpg");
+}
+
+.egsquares {
+  .summary-theme(#A1CFD9, "./img/enchanted-gingerbread-squares.jpg");
+}
