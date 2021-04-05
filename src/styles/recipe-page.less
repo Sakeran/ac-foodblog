@@ -1,0 +1,73 @@
+@import "./colors.less";
+
+.recipe-page-about {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
+
+  & h2 {
+    font-size: 2.5rem;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    padding-bottom: 2rem;
+  }
+}
+
+.recipe-page-ingredients {
+  background-color: @bg-pink;
+
+  h2 {
+    padding: 2rem 0.5rem 1rem;
+  }
+
+  ul {
+    padding-left: 3rem;
+    list-style-image: url("img/list-bullet.svg");
+    margin-bottom: 2rem;
+  }
+
+  li {
+    margin-bottom: 0.325rem;
+  }
+}
+
+.store-locator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background-color: rgb(32, 32, 32);
+
+  background-blend-mode: overlay;
+  background-image: url("img/ingredients.jpg");
+  background-size: cover;
+
+  &.lazybg {
+      background-image: none;
+  }
+
+  h3 {
+    color: white;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    .btn;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+
+    img {
+      width: 24px;
+      height: auto;
+      margin-right: 1rem;
+    }
+  }
+}

@@ -18,7 +18,7 @@
   );
 
   const summaries = document.querySelectorAll(
-    ".recipe-summary, .newsletter-signup-form"
+    ".recipe-summary, .newsletter-signup-form, .store-locator"
   );
   summaries.forEach((s) => {
     s.classList.add("lazybg");
