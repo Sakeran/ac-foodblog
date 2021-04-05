@@ -13,11 +13,13 @@
       }
     },
     {
-      rootMargin: "20%",
+      rootMargin: "-20%",
     }
   );
 
-  const summaries = document.querySelectorAll(".recipe-summary");
+  const summaries = document.querySelectorAll(
+    ".recipe-summary, .newsletter-signup-form"
+  );
   summaries.forEach((s) => {
     s.classList.add("lazybg");
     observer.observe(s);
