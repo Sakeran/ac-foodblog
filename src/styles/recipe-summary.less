@@ -15,8 +15,15 @@
   }
 
   & img {
-    // margin: 1rem auto;
     border-radius: 16px;
+  }
+
+  .recipe-link a {
+    transition: color 0.25s ease-out;
+    &:hover,
+    &:focus {
+      color: @accent;
+    }
   }
 
   & .recipe-text {
@@ -25,6 +32,45 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
+
+    @media screen and (min-width: @desktop-bp) {
+      display: grid;
+
+      max-width: 75%;
+
+      grid-template-areas:
+        "image description"
+        "image details"
+        "image link";
+
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: 2fr 2fr 1fr;
+      column-gap: 1rem;
+
+      img {
+        grid-area: image;
+      }
+
+      p {
+        grid-area: description;
+        margin: 0;
+      }
+
+      .recipe-text-details {
+        grid-area: details;
+
+        display: flex;
+
+        p {
+          margin-right: 2rem;
+        }
+      }
+
+      .recipe-link {
+        padding-top: 0.5rem;
+        grid-area: link;
+      }
+    }
   }
 
   & .recipe-link a {
@@ -34,6 +80,11 @@
 
     padding: 1rem;
     font-size: 2rem;
+
+    @media screen and (min-width: @desktop-bp) {
+      text-align: left;
+      padding: 0;
+    }
   }
 }
 
@@ -78,6 +129,11 @@
   background-image: url(@img-url);
   background-size: contain;
   background-blend-mode: overlay;
+
+  @media screen and (min-width: @desktop-bp) {
+    background-size: cover;
+    background-position: right;
+  }
 
   &.lazybg {
     background-image: none;
