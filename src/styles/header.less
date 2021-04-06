@@ -8,8 +8,9 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 1rem;
 
-  @media screen and (min-width: @desktop-bp) {
+  @media screen and (min-width: 1110px) {
     flex-wrap: nowrap;
   }
 
@@ -95,9 +96,11 @@ header {
       flex-grow: 1;
 
       flex-direction: row;
+      justify-items: flex-start;
 
       border-bottom: none;
     }
+
 
     & ul {
       margin-top: 1rem;
@@ -130,7 +133,7 @@ header {
       font-size: 1.5rem;
       font-weight: 700;
 
-      @media screen and (min-width: @desktop-bp) {
+      @media screen and (min-width: 1110px) {
         margin-left: 4rem;
       }
     }
