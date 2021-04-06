@@ -17,7 +17,7 @@
   background-color: @bg-pink;
 
   h2 {
-    padding: 2rem 0.5rem 1rem;
+    padding: 2rem 1rem 1rem;
   }
 
   ul {
@@ -44,7 +44,7 @@
   background-size: cover;
 
   &.lazybg {
-      background-image: none;
+    background-image: none;
   }
 
   h3 {
@@ -68,6 +68,46 @@
       width: 24px;
       height: auto;
       margin-right: 1rem;
+    }
+  }
+}
+
+.recipe-page-instructions {
+  padding: 2rem 0.5rem 1rem;
+
+  ol {
+    padding-left: 1.25rem;
+    color: @primary-pink;
+    font-weight: 700;
+  }
+
+  li {
+    margin: 1rem 0;
+  }
+
+  p {
+    color: black;
+    font-weight: 400;
+  }
+}
+
+.recipe-page-buttons {
+  display: flex;
+  max-width: 60ch;
+  justify-content: flex-end;
+
+  button {
+    .btn;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+
+    &:first-of-type {
+      background-color: @primary-pink;
+    }
+
+    &:first-of-type:hover,
+    &:first-of-type:focus {
+      background-color: @primary-pink-dark;
     }
   }
 }
