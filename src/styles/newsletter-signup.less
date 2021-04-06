@@ -6,6 +6,11 @@
   background-color: @primary-red;
   color: white;
 
+  @media screen and (min-width: @desktop-bp) {
+    display: flex;
+    padding-top: 0;
+  }
+
   & .newsletter-signup-desc {
     margin-bottom: 2rem;
 
@@ -18,11 +23,28 @@
         font-weight: 700;
         font-size: 1.1em;
       }
+
+      @media screen and (min-width: @desktop-bp) {
+        line-height: 0.9;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
     }
 
     p {
       margin-top: 0.25rem;
       font-size: 1rem;
+
+      @media screen and (min-width: @desktop-bp) {
+        font-size: 1.25rem;
+        max-width: 40ch;
+      }
+    }
+
+    @media screen and (min-width: @desktop-bp) {
+      flex-shrink: 0;
+      flex-basis: 40%;
+      padding: 0 2rem;
     }
   }
 
@@ -32,6 +54,12 @@
     background-blend-mode: overlay;
     background-size: cover;
     padding: 2rem 0.5rem;
+
+    @media screen and (min-width: @desktop-bp) {
+      flex-shrink: 2;
+      flex-basis: 60%;
+      padding-left: 2rem;
+    }
 
     &.lazybg {
       background-image: none;
@@ -43,6 +71,10 @@
       font-size: 1rem;
       margin-bottom: 1rem;
       padding: 0 0.5rem;
+
+      @media screen and (min-width: @desktop-bp) {
+        max-width: 75%;
+      }
 
       &:last-of-type {
         margin-bottom: 0;
