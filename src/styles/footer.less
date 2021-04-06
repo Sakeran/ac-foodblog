@@ -7,13 +7,23 @@ footer {
   font-size: 1rem;
 
   padding: 2rem 1rem 1rem;
+  
+  @media screen and (min-width: @desktop-bp) {
+    padding: 1rem 0;  
+  }
 
   p {
     margin: 0;
+
+    @media screen and (min-width: @desktop-bp) {
+      margin: 0 auto;
+      max-width: 1200px; 
+    }
   }
 
   a {
-      color: white;
-      text-decoration: none;
+    color: white;
+    text-decoration: none;
   }
+
 }
