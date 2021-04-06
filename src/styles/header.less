@@ -9,11 +9,19 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media screen and (min-width: @desktop-bp) {
+    flex-wrap: nowrap;
+  }
+
   & h1 {
     width: 250px;
     height: auto;
 
     z-index: 5;
+
+    @media screen and (min-width: @desktop-bp) {
+      width: 375px;
+    }
   }
 
   & .menu-toggle-checkbox {
@@ -31,6 +39,10 @@ header {
     &:checked ~ .menu-toggle {
       transform: rotate(-90deg);
     }
+
+    @media screen and (min-width: @desktop-bp) {
+      display: none;
+    }
   }
 
   & .menu-toggle {
@@ -47,6 +59,10 @@ header {
       position: absolute;
       top: -1000px;
       left: -1000px;
+    }
+
+    @media screen and (min-width: @desktop-bp) {
+      display: none;
     }
   }
 
@@ -68,22 +84,55 @@ header {
 
     border-bottom: 2px solid rgba(0, 0, 0, 0.15);
 
+    @media screen and (min-width: @desktop-bp) {
+      position: static;
+      transform: none;
+      transition: none;
+
+      width: auto;
+      max-width: 1100px;
+      flex-basis: auto;
+      flex-grow: 1;
+
+      flex-direction: row;
+
+      border-bottom: none;
+    }
+
     & ul {
       margin-top: 1rem;
       transition: opacity 0.15s ease-out;
       opacity: 0;
 
       list-style: none;
+
+      @media screen and (min-width: @desktop-bp) {
+        transition: none;
+        opacity: 1;
+        margin-top: 0;
+      }
     }
 
     & a {
       color: @primary-pink;
       text-decoration: none;
+
+      @media screen and (min-width: @desktop-bp) {
+        transition: color 0.25s ease-out;
+        &:hover,
+        &:focus {
+          color: @accent;
+        }
+      }
     }
 
     & .site-links {
       font-size: 1.5rem;
       font-weight: 700;
+
+      @media screen and (min-width: @desktop-bp) {
+        margin-left: 4rem;
+      }
     }
 
     & .site-links {
@@ -91,6 +140,12 @@ header {
       display: flex;
       flex-direction: column;
       align-items: stretch;
+
+      @media screen and (min-width: @desktop-bp) {
+        flex-direction: row;
+        flex-basis: auto;
+        width: auto;
+      }
     }
 
     & .site-links li {
@@ -116,6 +171,27 @@ header {
         width: 100%;
         padding: 1rem 0;
       }
+
+      @media screen and (min-width: @desktop-bp) {
+        margin-left: 2rem;
+        text-align: left;
+        border-bottom: none;
+
+        &:first-of-type {
+          border-top: none;
+        }
+
+        &:hover,
+        &:focus-within {
+          background-image: none;
+        }
+
+        a {
+          display: inline;
+          width: auto;
+          padding: 0;
+        }
+      }
     }
 
     & .social-links {
@@ -136,6 +212,20 @@ header {
         &:focus,
         &:hover {
           color: @accent;
+        }
+      }
+
+      @media screen and (min-width: @desktop-bp) {
+        width: auto;
+        flex-basis: auto;
+
+        margin: 0;
+        margin-left: auto;
+
+        align-items: center;
+
+        svg {
+          max-width: 48px;
         }
       }
     }
